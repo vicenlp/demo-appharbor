@@ -1,0 +1,24 @@
+﻿
+<html>
+<head>
+    <title>Demo 04 Javascript</title>
+</head>
+<body>
+    <h1 id="titulo">Demo 04 Javascript</h1>
+    <button onclick="cambiarTitulo()">Boton 1 </button> 
+    <br />
+    <button id="btn2">Boton 2 </button>
+    <script type="text/javascript">
+        function cambiarTitulo() {
+            var t = document.getElementById('titulo')
+            if (t) {
+                t.innerHTML = 'Demo 05 JavaScrip';
+            }
+        }
+        window.onload = function () {
+            var b2 = document.getElementById('btn2')
+            b2.addEventListener('click', cambiarTitulo)
+        }
+    </script>
+</body>
+</html>
