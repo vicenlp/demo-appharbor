@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+    <title>Calculador random</title>
+    <h1> Calculadora Aleatoria</h1>    
+    <style>
+        .imagenbotom {
+            width: 54px;
+            height: 54px;
+        }
+
+    </style>
+
+    <script>
+
+        var boton=0;
+        var mostrado="";
+
+    
+        function borrar(){
+        boton=0;
+        mostrado="";
+        document.formrandom.ver.value=0;
+
+        }
+
+
+        function mostrar(a){
+
+        mostrado=mostrado+a;
+        document.formrandom.ver.value=mostrado;
+    
+        boton=parseFloat(mostrado);
+        }
+
+        function resultado() {
+        mostrado="";
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <div>
+        <table border="1">
+                <td>
+                    <table>
+                        <form name="formrandom" action="" method="">
+                                <input type="text" value=0 name="ver" />
+                            <tr>
+                                <td><input type="button" name="c" value="C" class="imagenbotom" onclick="borrar()" /></td>
+                                <td><input type="button" name="cero" value="0" class="imagenbotom" style="text-align:center" onclick="mostrar(0)" /></td>
+                                <td><input type="button" name="igual" value="=" class="imagenbotom" style="text-align:center" onclick="resultado()" /></td>
+                            </tr>
+                                <td><input type="button" name="siete" value=7 class="imagenbotom" style="text-align:center" onclick="mostrar(7)" /></td>
+                                <td><input type="button" onclick="mostrar(8)" name="ocho" value="8" class="imagenbotom" style="text-align:center" /></td>
+                                <td><input type="button" name="nueve" value="9" onclick="mostrar(9)" class="imagenbotom" style="text-align:center" /></td>
+                            <tr>
+                                <td><input type="button" name="cuatro" value="4" onclick="mostrar(4)" class="imagenbotom" style="text-align:center" /></td>
+                                <td><input type="button" name="cinco" onclick="mostrar(5)" value="5" class="imagenbotom" style="text-align:center" /></td>
+                                <td><input type="button" name="seis" onclick="mostrar(6)" value="6" class="imagenbotom" style="text-align:center" /></td>
+                            </tr>
+                                <td><input type="button" name="uno" value="1" onclick="mostrar(1)" class="imagenbotom" style="text-align:center" /></td>
+                                <td><input type="button" name="dos" onclick="mostrar(2)" value="2" class="imagenbotom" style="text-align:center" /></td>
+                                <td><input type="button" name="tres" value="3" onclick="mostrar(3)" class="imagenbotom" style="text-align:center" /></td>
+                        </form>
+                    </table>
+                </td>
+        </table>
+    </div>
+</body>
+</html> 
